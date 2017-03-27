@@ -20,13 +20,13 @@ function getWeather(position) {
     $.getJSON(weatherApi + units)
         .done(function (data) {
             scope.unit = 'C';
-            scope.toggle = false;
             scope.city = data.name;
+            scope.toggle = false;
             getCountryName(data.sys.country);
-            scope.temp = Math.round(data.main.temp);
             scope.cel = Math.round(data.main.temp);
             scope.fah = Math.round((data.main.temp * 9) / 5 + 32);
             scope.des = data.weather[0].main;
+            scope.temp = scope.cel;
             scope.description = data.weather[0].description;
 
             for (var [key, value] of Object.entries(scope)) {
@@ -43,4 +43,18 @@ function getCountryName(code) {
         });
 }
 
-$("#test").click(function () { getLocation(); });
+$("a#tunit").on('click', function () { toggleUnit(); });
+
+function toggleUnit() {
+    if (!scope.toggle) {
+        $("#temp").html(scope.fah);
+        scope.unit = 'F';
+        $("#unit").html(scope.unit);
+        scope.toggle = !scope.toggle;
+    } else {
+        $("#temp").html(scope.cel);
+        scope.unit = 'C';
+        $("#unit").html(scope.unit);
+        scope.toggle = !scope.toggle;
+    }
+}

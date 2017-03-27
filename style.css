@@ -10,6 +10,21 @@ body {
   transform: translateX(-50%) translateY(-50%);
 }
 
+div {
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #ff9;
+    color: #00f;
+    box-shadow: 5px 5px rgba(100,95,245,0.9);
+}
+
+#footer {
+    padding: 5px;
+    background-color: #fff;
+    color: #0f0;
+    box-shadow: 5px 5px rgba(100,95,245,0.9);
+}
+
 #city, #country, #temp, #meas {
   font-size: x-large;
 }
