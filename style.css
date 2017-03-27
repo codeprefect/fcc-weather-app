@@ -1,0 +1,15 @@
+body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #fff;
+            background-color: #00ff90;
+            align-content: center;
+            text-align: center;
+        }
+
+        #city, #country, #temp, #meas {
+            font-size: x-large;
+        }
+
+        .all-icons {
+            display: none;
+        }
