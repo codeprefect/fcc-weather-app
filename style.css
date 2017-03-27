@@ -1,15 +1,19 @@
 body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: #fff;
-            background-color: #00ff90;
-            align-content: center;
-            text-align: center;
-        }
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
+  background-color: #00ff90;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
 
-        #city, #country, #temp, #meas {
-            font-size: x-large;
-        }
+#city, #country, #temp, #meas {
+  font-size: x-large;
+}
 
-        .all-icons {
-            display: none;
-        }
+.all-icons {
+  display: none;
+}
